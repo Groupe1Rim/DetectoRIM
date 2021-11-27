@@ -133,7 +133,7 @@ for u in range(tui):
 data = {'Origine':simple,'Position':Positions,'Gapinf':Gapinf,'Gapsup':Gapsup}
 dfinal = pd.DataFrame(data)
 dfinal.to_csv(f'SNPsfinal.csv')
-dfinal.to_excel(f'SNPsfinal.xlsx')
+#dfinal.to_excel(f'SNPsfinal.xlsx')
 
 
 dfr=pd.read_csv('SNPsfinal.csv',sep=",")
@@ -240,8 +240,8 @@ for b in dd4.index:
 
 dd4['Taille'] = Profit
 
-dd4.to_csv(f'Fin2.csv')
-dd4.to_excel(f'Fin2.xlsx')
+#dd4.to_csv(f'Fin2.csv')
+#dd4.to_excel(f'Fin2.xlsx')
 
 
 tailleA=0
