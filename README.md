@@ -1,2 +1,3 @@
-# Recombinator
-Tool to detect recombination in two species very close genetically after a recombination phenomenon
+# Genomique
+Ce dossier est un dossier de dépot des différents codes utilisées dans un projet unviersitaire de l'UE (mettre nom UE)
+
