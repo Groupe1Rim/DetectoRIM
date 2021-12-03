@@ -92,5 +92,3 @@ temps2=temps/60
 print(f'Temps écoulé : {temps2}min')
 
 
-
-
