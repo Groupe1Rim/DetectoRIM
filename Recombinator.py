@@ -35,17 +35,18 @@ débutduprogramme = time.perf_counter()
 
 
 #####################Version devellopeur###############################
-seqRecord3 = SeqIO.read('Sequenceconsensusmix2versionest.fasta', 'fasta')
-print(seqRecord3)
-seql=len(seqRecord3.seq)
+seqRecord3 = SeqIO.read('Sequence4s11ououi.fasta', 'fasta')
+seql=len(seqRecord3)
+
+
 print(seql)
 #On importe la séquence d'interet et on calcule sa taille
-df=pd.read_csv('SNPSMIX4S_11V2',sep="\t")
+df=pd.read_csv('SNPS',sep="\t")
 #On récupère le Document contenant les snps
 ahhh=input('Qui est la premiere séquence?: ')
 beeeh=input('Qui est la seconde séquence?: ')
-
-
+stringe=input('stringence?:')
+stringe=int(stringe)
 number=[1,2,3]
 for i in number:
     indexNames = df[ df[f'sequence_{i}_PosInContg'] == 0 ].index
@@ -133,7 +134,7 @@ for u in range(tui):
 data = {'Origine':simple,'Position':Positions,'Gapinf':Gapinf,'Gapsup':Gapsup}
 dfinal = pd.DataFrame(data)
 dfinal.to_csv(f'SNPsfinal.csv')
-#dfinal.to_excel(f'SNPsfinal.xlsx')
+dfinal.to_excel(f'SNPsfinal.xlsx')
 
 
 dfr=pd.read_csv('SNPsfinal.csv',sep=",")
@@ -146,7 +147,7 @@ gapinf=[]
 gapsup=[]
 listeinfo=[]
 for k in dfr.index:
-    if dfr.Gapinf[k]<5 or dfr.Gapsup[k]<5:
+    if dfr.Gapinf[k]<stringe or dfr.Gapsup[k]<stringe:
         snpsvrai.append(dfr.Origine[k])
         position2.append(dfr.Position[k])
         gapinf.append(dfr.Gapinf[k])
@@ -166,7 +167,7 @@ listeinfochange=[]
 
 
 for i in dd.index:    
-    if dd.Gapinf[i]<5 and dd.Gapsup[i]<5:
+    if dd.Gapinf[i]<stringe and dd.Gapsup[i]<stringe:
         listeinfo.append("continu")     
     else:
         listeinfo.append("change")
@@ -240,8 +241,8 @@ for b in dd4.index:
 
 dd4['Taille'] = Profit
 
-#dd4.to_csv(f'Fin2.csv')
-#dd4.to_excel(f'Fin2.xlsx')
+dd4.to_csv(f'Fin2.csv')
+dd4.to_excel(f'Fin2.xlsx')
 
 
 tailleA=0
@@ -258,32 +259,52 @@ for k in dd4.index:
 
 identityA=((tailleA/seql)*100)
 print(f'{ahhh}: {identityA}%')
+print(tailleA)
 identityB=((tailleB/seql)*100)    
 print(f'{beeeh}: {identityB}%')
+print(tailleB)
 
-fichier1 = open(f'R4_S211v2infos.txt', "a")
+fichier1 = open(f'R4_S211infosfinal.txt', "a")
 fichier1.write(f'Pourcentage d ADN provenant de {ahhh}: {identityA}%\n')
 fichier1.write(f'Pourcentage d ADN provenant de {beeeh}: {identityB}%\n')
 fichier1.close()
 
+lengthA = 0
+lengthB = 0
+elemsA = []
+elemsB = []
+ro=len(dd4.index)
+ro=ro-1
 
-for j in dd4.index:
+for j in range(ro):
     if dd4.Origine[j]==['A']:
-        
-       Feature.append(GraphicFeature(start=dd4["start"][j], end=dd4["end"][j],color="#cffccc",label='A'))
-       
+       distance =  dd4["start"][j+1]-dd4["start"][j]
+       lengthA+=distance
+       elemsA.append(j)
+       if dd4.Origine[j+1]==['B']:
+            startpoint = dd4["start"][elemsA[0]]
+            endpoint = dd4["start"][elemsA[0]]+lengthA
+            Feature.append(GraphicFeature(start=startpoint, end=endpoint,color="#cffccc",label=f'{ahhh}'))
+            elemsA = []
+            lengthA = 0
     if dd4.Origine[j]==['B']:
-        Feature.append(GraphicFeature(start=dd4["start"][j], end=dd4["end"][j],color="#ffcccc",label='B'))
+        distance =  dd4["start"][j+1]-dd4["start"][j]
+        lengthB+=distance
+        elemsB.append(j)
+        if dd4.Origine[j+1]==['A']:
+           startpoint = dd4["start"][elemsB[0]]
+           endpoint = dd4["start"][elemsB[0]]+lengthB
+           Feature.append(GraphicFeature(start=startpoint, end=endpoint,color="#ffcccc",label=f'{beeeh}'))
+           elemsB = []
+           lengthB = 0
 
-
-
-
+#Feature.append(GraphicFeature(start=11456842, end=11536381 ,color="#ffcccc",label=f'{beeeh}'))
 
 
 record = GraphicRecord(sequence_length=seql, features=Feature)
 print("Je vais commencer à tracer le graphique, cela risque de prendre quelques minutes :)" )
-ax, _ = record.plot(figure_width=250)
-ax.figure.savefig("4_S211v2.png")
+ax, _ = record.plot(figure_width=50)
+ax.figure.savefig("4_S211final2.png")
 print("C'est fini!")
 
 
