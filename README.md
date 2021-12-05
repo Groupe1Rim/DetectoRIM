@@ -5,8 +5,9 @@ Tool to detect recombination in Streptomyces species very close genetically
 
 # Installation
 <h3>Required dependencies<h3/>
-Python version-->3.0 or more
-Python modules:
+<p>Python version-->3.0 or more<p/>
+   
+<p>Python modules:<p/>
    <ul>
      <li>pandas</li>
      <li>statistics</li>
