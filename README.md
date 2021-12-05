@@ -4,7 +4,7 @@ Tool to detect recombination in Streptomyces species very close genetically
 # Contents
 
 # Installation
-<h2>Required dependencies<h2/>
+<h3>Required dependencies<h3/>
 
 
 
