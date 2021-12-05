@@ -10,11 +10,11 @@ Tool to detect recombination in Streptomyces species very close genetically
    
 <h4>Python modules:<h4/>
    <ul>
-     <li>pandas</li>
-     <li>statistics</li>
-     <li>openpyxl</li>
-     <li>dna_features_viewer</li>
-     <li>Biopython</li>
+     <li><p>pandas</p></li>
+     <li><p>statistics</p></li>
+     <li><p>openpyxl</p></li>
+     <li><p>dna_features_viewer</p></li>
+     <li><p>Biopython</p></li>
      <ul/>
     
      
