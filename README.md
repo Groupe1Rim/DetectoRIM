@@ -28,7 +28,7 @@ You can then use each script independently
 ## Authors
 
 * **Alizée Bueche** 
-* **Clementine Isembart** 
+* **Clémentine Isembart** 
 * **Julie Charles** 
 * **Louis L'Hôte** 
 * **Pauline Gascht**
