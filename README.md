@@ -30,9 +30,15 @@ You can then use each script independently
 
 ### Create chimeria
 
+Chimerator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
+.backbone output file must be in text format. 
+Sequences files must be in Fasta format
+
 To create chimeria use chimerator.py :
 
 ``python chimerator.py``
+
+
 
 
 
