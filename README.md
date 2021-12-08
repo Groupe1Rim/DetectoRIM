@@ -13,13 +13,9 @@ Python version-->3.0 or more
 Python modules:
 
       -pandas
-      
       -statistics
-      
       -openpyxl
-      
       -dna_features_viewer
-      
       -Biopython
       
       
