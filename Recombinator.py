@@ -26,25 +26,25 @@ débutduprogramme = time.perf_counter()
 
 
 #####################Version interactive###############################
-#Seqinteret=input('Entrez le nom de votre séquence:  ')
-#seqRecord3 = SeqIO.read('Seqinterest', 'fasta')
-#seql=len(seqRecord3)
-#tableau=input('Entrez le nom de votre document contenant les SNPs:  ')
-#df=pd.read_csv('tableau',sep="\t")
+Seqinteret=input('Enter the name of the recombinant sequence:  ')
+seqRecord3 = SeqIO.read('Seqinterest', 'fasta')
+seql=len(seqRecord3)
+tableau=input('Enter the name of the document containing all the SNPs:  ')
+df=pd.read_csv('tableau',sep="\t")
 
 
 
 #####################Version devellopeur###############################
-seqRecord3 = SeqIO.read('Sequence4s11ououi.fasta', 'fasta')
-seql=len(seqRecord3)
+#seqRecord3 = SeqIO.read('Sequence4s11ououi.fasta', 'fasta')
+#seql=len(seqRecord3)
 
 
 print(seql)
 #On importe la séquence d'interet et on calcule sa taille
-df=pd.read_csv('SNPS',sep="\t")
+#df=pd.read_csv('SNPS',sep="\t")
 #On récupère le Document contenant les snps
-ahhh=input('Qui est la premiere séquence?: ')
-beeeh=input('Qui est la seconde séquence?: ')
+ahhh=input('Which is the first parent sequence?: ')
+beeeh=input('Which is the second parent sequence?: ')
 stringe=input('stringence?:')
 stringe=int(stringe)
 number=[1,2,3]
@@ -134,7 +134,7 @@ for u in range(tui):
 data = {'Origine':simple,'Position':Positions,'Gapinf':Gapinf,'Gapsup':Gapsup}
 dfinal = pd.DataFrame(data)
 dfinal.to_csv(f'SNPsfinal.csv')
-dfinal.to_excel(f'SNPsfinal.xlsx')
+dfinal.to_excel(f'total_SNPs.xlsx')
 
 
 dfr=pd.read_csv('SNPsfinal.csv',sep=",")
@@ -242,7 +242,7 @@ for b in dd4.index:
 dd4['Taille'] = Profit
 
 dd4.to_csv(f'Fin2.csv')
-dd4.to_excel(f'Fin2.xlsx')
+dd4.to_excel(f'Sorted_SNPs.xlsx')
 
 
 tailleA=0
@@ -264,7 +264,7 @@ identityB=((tailleB/seql)*100)
 print(f'{beeeh}: {identityB}%')
 print(tailleB)
 
-fichier1 = open(f'R4_S211infosfinal.txt', "a")
+fichier1 = open(f'Recombinant_sequence.txt', "a")
 fichier1.write(f'Pourcentage d ADN provenant de {ahhh}: {identityA}%\n')
 fichier1.write(f'Pourcentage d ADN provenant de {beeeh}: {identityB}%\n')
 fichier1.close()
@@ -302,10 +302,10 @@ for j in range(ro):
 
 
 record = GraphicRecord(sequence_length=seql, features=Feature)
-print("Je vais commencer à tracer le graphique, cela risque de prendre quelques minutes :)" )
-ax, _ = record.plot(figure_width=50)
-ax.figure.savefig("4_S211final2.png")
-print("C'est fini!")
+
+ax, _ = record.plot(figure_width=25)
+ax.figure.savefig("Recombinant_sequence.png")
+print("It's over!")
 
 
 
@@ -313,7 +313,7 @@ print("C'est fini!")
 
 finduprogamme = time.process_time()
 temps=finduprogamme-débutduprogramme
-print(f'Temps écoulé : {temps}s')
+print(f'Elapsed time : {temps}s')
 temps2=temps/60
 print(f'Temps écoulé : {temps2}min')
 
