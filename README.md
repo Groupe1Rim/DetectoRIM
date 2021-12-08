@@ -36,25 +36,43 @@ Chimerator.py needs .backbone output file from a Mauve alignment and the two ali
 
 ### Usage
 
-To create chimeria use chimerator.py :
+To create chimeria use Chimerator.py :
 
-``python chimerator.py``
+``python Chimerator.py``
 
 ### Output files
 
 A successful Chimerator.py run will generate differents files :
 
-- A number of chimeras equivalent to the number of homologous zones between each parent
+- A number of chimeras in fasta file equivalent to the number of homologous zones between each parent
+- A text file with the percentage of membership for each parent for each chimera
 - A .csv file containing for each chimera the percentage of membership in each parent
 
 ### Warning
 
 Be careful, if the two sequences studied are genetically close, this can result in the creation of a large number of chimeras. So make sure you have enough memory on your hard drive. 
 
+## Create final sequene from consensus sequence
 
+To create a final mix sequence you have to use Consensusator.py
+First you have to aligned the 2 consensus sequences on the Mauve tool
 
+### Input files
 
+Consensusator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
 
+.backbone output file must be in text format and sequences files must be in Fasta format
+
+### Usage
+
+To create final sequence use Consensusator.py :
+
+``python Consensusator.py``
+
+### Output files
+
+A successful Consensusator.py run will generate :
+- A final sequence in fasta format
 
 
 ## Authors
