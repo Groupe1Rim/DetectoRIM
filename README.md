@@ -9,6 +9,9 @@ Tool to detect recombination in Streptomyces species very close genetically
 
 ## Contents
   * [Installation](#installation)
+    * [Required dependencies](#required-dependencies)
+    * [Installation procedure](#installation-procedure)
+    
   * [Create chimeria](#create-chimeria) 
 
 ## Installation
