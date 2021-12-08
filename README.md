@@ -26,22 +26,21 @@ Python modules:
 Use the git command ``git clone https://github.com/Groupe1Rim/DetectoRIM.git``
 You can then use each script independently
 
-## Usage
 
-### Create chimeria
-  Input files
+## Create chimeria
+###Input files
 
 Chimerator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
 
 .backbone output file must be in text format and sequences files must be in Fasta format
 
-  Usage
+###Usage
 
 To create chimeria use chimerator.py :
 
 ``python chimerator.py``
 
-  Output files
+###Output files
 
 
 
