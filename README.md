@@ -12,18 +12,18 @@ Tool to detect recombination in Streptomyces species very close genetically
     * [Required dependencies](#required-dependencies)
     * [Installation procedure](#installation-procedure)
   * [Create chimeria](#create-chimeria) 
-    * [Chimerator.py input files](#chimerator.py-input-files)
-    * [Chimerator.py usage](#chimerator.py-usage)
-    * [Chimerator.py output files](#Chimerator.py-output-files)
+    * [Chimerator input files](#chimerator.py-input-files)
+    * [Chimerator usage](#chimerator.py-usage)
+    * [Chimerator output files](#Chimerator.py-output-files)
     * [Warning](#warning)
   * [Create final sequene from consensus sequence](#create-final-sequene-from-consensus-sequence) 
-    * [Consensusator.py input files](#consensusator.py-input-files)
-    * [Consensusator.py usage](#consensusator.py-usage)
-    * [Consensusator.py output files](#consensusator.py-output-files)
+    * [Consensusator input files](#consensusator.py-input-files)
+    * [Consensusator usage](#consensusator.py-usage)
+    * [Consensusator output files](#consensusator.py-output-files)
  * [Calculates and represents the recombination](#calculates-and-represents-the-recombination) 
-    * [Recombinator.py input files](#recombinator.py-input-files)
-    * [Recombinator.py usage](#recombinator.py-usage)
-    * [Recombinator.py output files](#recombinator.py-output-files)
+    * [Recombinator input files](#recombinator.py-input-files)
+    * [Recombinator usage](#recombinator.py-usage)
+    * [Recombinator output files](#recombinator.py-output-files)
  * [Authors](#authors)
 
 
@@ -52,19 +52,19 @@ You can then use each script independently
 To create chimeria you have to use Chimerator.py
 First you have to aligned the 2 parent sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
 
-### Chimerator.py input files
+### Chimerator input files
 
 Chimerator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
 
 .backbone output file must be in text format and sequences files must be in Fasta format
 
-### Chimerator.py usage
+### Chimerator usage
 
 To create chimeria use Chimerator.py :
 
 ``python Chimerator.py``
 
-### Chimerator.py output files
+### Chimerator output files
 
 A successful Chimerator.py run will generate differents files :
 
@@ -81,19 +81,19 @@ Be careful, if the two sequences studied are genetically close, this can result 
 To create a final mix sequence you have to use Consensusator.py
 First you have to aligned the 2 consensus sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
 
-### Consensusator.py input files
+### Consensusator input files
 
 Consensusator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
 
 .backbone output file must be in text format and sequences files must be in Fasta format
 
-### Consensusator.py usage
+### Consensusator usage
 
 To create final sequence use Consensusator.py :
 
 ``python Consensusator.py``
 
-### Consensusator.py output files
+### Consensusator output files
 
 A successful Consensusator.py run will generate :
 - A final sequence in fasta format
@@ -103,12 +103,12 @@ A successful Consensusator.py run will generate :
 To calculates and represents the recombination you have to use Recombinator.py
 First you have to aligned the 2 prents sequences and the recombinant sequence on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
 
-### Recombinator.py input files
+### Recombinator input files
 Recombinator.py needs SNP output file from a Mauve alignment and the three aligned sequences
 
 SNP output file must be in text format and sequences files must be in Fasta format
 
-### Recombinator.py usage
+### Recombinator usage
 
 To create calculates recombination in the recombinant sequence and have a graphic representation of the recombinant genome use Recombinator.py :
 
@@ -117,13 +117,14 @@ To create calculates recombination in the recombinant sequence and have a graphi
 Recombinator.py will ask which are the two parent sequences. For the first parent sequence you have to write the name of the first sequence aligned in Mauve and for the second parent sequence you have to write the name of the second sequence aligned in Mauve. You must then define a window in which SNPs blocks will be created in order to define from which parent each part of the genome of the recombinant sequence comes from. The higher the density of SNPs on the genome, the better it is to use a small window(like 5 SNPs.)
 
 
-### Recombinator.py output files
+### Recombinator output files
 
 A successful Recombinator.py run will generate :
 
 - An excel document containing all the SNPs that concern each of the 3 sequences named "total_SNPs.xlsx".With for each SNP its position on the genome of the recombinant, its origin (To which parent it belongs) as well as the distance which separates it from each SNP (upstream and downstream of the genome)
 - An excel document containing only the SNPs blocks that are created following the user defined window named "Sorted_SNPs.xlsx". .With for each SNPs block  its position on the genome of the recombinant (start position and end position), its origin (To which parent it belongs) and the size of each block (Distance between each block).
-- A png image showing which parent each part of the recombinant sequence genome comes from. As shown below: 
+- A text document that contains the percentage of membership for each parent named "Recombinant_sequence.txt".
+- A png image showing which parent each part of the recombinant sequence genome comes from named "Recombinant_sequence.png". As shown below: 
 
 ![alt text](https://github.com/Groupe1Rim/DetectoRIM/blob/main/2_S2102finalpetit.png?raw=true)
 
