@@ -47,6 +47,10 @@ A successful Chimerator.py run will generate differents files :
 - A number of chimeras equivalent to the number of homologous zones between each parent
 - A .csv file containing for each chimera the percentage of membership in each parent
 
+### Warning
+
+Be careful, if the two sequences studied are genetically close, this can result in the creation of a large number of chimeras. So make sure you have enough memory on your hard drive. 
+
 
 
 
