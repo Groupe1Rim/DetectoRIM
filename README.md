@@ -6,6 +6,8 @@ Tool to detect recombination in Streptomyces species very close genetically
 
 ## Contents
 
+## Installation
+
 ### Required dependencies
       
 Python version-->3.0 or more
@@ -19,12 +21,13 @@ Python modules:
       -Biopython
       
       
-### Installation
+### Installation procedure
 
 Use the git command ``git clone https://github.com/Groupe1Rim/DetectoRIM.git``
 You can then use each script independently
 
-### Usage
+## Usage
+
 
 
 
