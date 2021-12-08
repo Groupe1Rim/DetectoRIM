@@ -28,6 +28,9 @@ You can then use each script independently
 
 
 ## Create chimeria
+To create chimeria you have to use Chimerator.py
+First you have to aligned the 2 parent sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
+
 ### Input files
 
 Chimerator.py needs .backbone output file from a Mauve alignment and the two aligned sequences
@@ -55,7 +58,7 @@ Be careful, if the two sequences studied are genetically close, this can result 
 ## Create final sequene from consensus sequence
 
 To create a final mix sequence you have to use Consensusator.py
-First you have to aligned the 2 consensus sequences on the Mauve tool
+First you have to aligned the 2 consensus sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
 
 ### Input files
 
@@ -73,6 +76,27 @@ To create final sequence use Consensusator.py :
 
 A successful Consensusator.py run will generate :
 - A final sequence in fasta format
+
+## Calculates and represents the recombination
+
+To calculates and represents the recombination you have to use Recombinator.py
+First you have to aligned the 2 prents sequences and the recombinant sequence on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
+
+### Input files
+Recombinator.py needs SNP output file from a Mauve alignment and the three aligned sequences
+
+SNP output file must be in text format and sequences files must be in Fasta format
+
+### Usage
+
+To create calculates recombination in the recombinant sequence and have a graphic representation of the recombinant genome use Recombinator.py :
+
+``python Recombinator.py``
+
+
+
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 
 ## Authors
