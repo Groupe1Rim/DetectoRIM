@@ -93,8 +93,16 @@ To create calculates recombination in the recombinant sequence and have a graphi
 
 ``python Recombinator.py``
 
+Recombinator.py will ask which are the two parent sequences. For the first parent sequence you have to write the name of the first sequence aligned in Mauve and for the second parent sequence you have to write the name of the second sequence aligned in Mauve. You must then define a window in which SNPs blocks will be created in order to define from which parent each part of the genome of the recombinant sequence comes from. The higher the density of SNPs on the genome, the better it is to use a small window(like 5 SNPs.)
 
 
+### Output files
+
+A successful Recombinator.py run will generate :
+
+- An excel document containing all the SNPs that concern each of the 3 sequences named "total_SNPs.xlsx".With for each SNP its position on the genome of the recombinant, its origin (To which parent it belongs) as well as the distance which separates it from each SNP (upstream and downstream of the genome)
+- An excel document containing only the SNPs blocks that are created following the user defined window named "Sorted_SNPs.xlsx". .With for each SNPs block  its position on the genome of the recombinant (start position and end position), its origin (To which parent it belongs) and the size of each block (Distance between each block).
+- A png image showing which parent each part of the recombinant sequence genome comes from. As shown below: 
 
 ![alt text](https://github.com/Groupe1Rim/DetectoRIM/blob/main/2_S2102finalpetit.png?raw=true)
 
