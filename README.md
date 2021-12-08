@@ -2,7 +2,7 @@
 
   # DetectoRIM(Detection of Recombination In streptoMyces)
 
-(https://forthebadge.com/images/badges/made-with-python.svg)
+![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 
 Tool to detect recombination in Streptomyces species very close genetically
 
