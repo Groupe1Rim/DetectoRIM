@@ -28,6 +28,12 @@ You can then use each script independently
 
 ## Usage
 
+### Create chimeria
+
+To create chimeria use chimerator.py :
+``python chimerator.py``
+
+
 
 
 
