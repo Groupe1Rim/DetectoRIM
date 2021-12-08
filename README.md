@@ -42,6 +42,12 @@ To create chimeria use chimerator.py :
 
 ### Output files
 
+A successful Chimerator.py run will generate differents files :
+
+- A number of chimeras equivalent to the number of homologous zones between each parent
+- A .csv file containing for each chimera the percentage of membership in each parent
+
+
 
 
 
