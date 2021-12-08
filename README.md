@@ -96,7 +96,7 @@ To create calculates recombination in the recombinant sequence and have a graphi
 
 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/Groupe1Rim/DetectoRIM/blob/main/2_S2102finalpetit.png?raw=true)
 
 
 ## Authors
