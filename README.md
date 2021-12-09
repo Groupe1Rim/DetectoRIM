@@ -49,8 +49,8 @@ Use the git command ``git clone https://github.com/Groupe1Rim/DetectoRIM.git``
 You can then use each script independently
 
 
-## Create chimeria
-To create chimeria you have to use Chimerator.py
+## Create chimera
+To create chimera you have to use Chimerator.py
 First you have to aligned the 2 parent sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
 
 ### Chimerator input files
