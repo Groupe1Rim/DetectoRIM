@@ -45,6 +45,7 @@ Python modules:
 ### Installation procedure
 
 Use the git command ``git clone https://github.com/Groupe1Rim/DetectoRIM.git``
+
 You can then use each script independently
 
 
