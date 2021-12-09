@@ -114,7 +114,8 @@ To create calculates recombination in the recombinant sequence and have a graphi
 
 ``python Recombinator.py``
 
-Recombinator.py will ask which are the two parent sequences. For the first parent sequence you have to write the name of the first sequence aligned in Mauve and for the second parent sequence you have to write the name of the second sequence aligned in Mauve. You must then define a window in which SNPs blocks will be created in order to define from which parent each part of the genome of the recombinant sequence comes from. The higher the density of SNPs on the genome, the better it is to use a small window(like 5 SNPs.)
+
+First you have to enter the name of the recombinant sequence and the document containing the SNPs. Recombinator.py will ask which are the two parent sequences. For the first parent sequence you have to write the name of the first sequence aligned in Mauve and for the second parent sequence you have to write the name of the second sequence aligned in Mauve. You must then define a window in which SNPs blocks will be created in order to define from which parent each part of the genome of the recombinant sequence comes from. The higher the density of SNPs on the genome, the better it is to use a small window(like 5 SNPs.)
 
 
 ### Recombinator output files
