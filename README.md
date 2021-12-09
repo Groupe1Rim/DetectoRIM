@@ -124,7 +124,7 @@ First you have to enter the name of the recombinant sequence and the document co
 A successful Recombinator.py run will generate :
 
 - An excel document containing all the SNPs that concern each of the 3 sequences named "total_SNPs.xlsx".With for each SNP its position on the genome of the recombinant, its origin (To which parent it belongs) as well as the distance which separates it from each SNP (upstream and downstream of the genome)
-- An excel document containing only the SNPs blocks that are created following the user defined window named "Sorted_SNPs.xlsx". .With for each SNPs block  its position on the genome of the recombinant (start position and end position), its origin (To which parent it belongs) and the size of each block (Distance between each block).
+- An excel document containing only the SNPs blocks that are created following the user defined window named "Sorted_SNPs.xlsx". With for each SNPs block  its position on the genome of the recombinant (start position and end position), its origin (To which parent it belongs) and the size of each block (Distance between each block).
 - A text document that contains the percentage of membership for each parent named "Recombinant_sequence.txt".
 - A png image showing which parent each part of the recombinant sequence genome comes from named "Recombinant_sequence.png". As shown below: 
 
