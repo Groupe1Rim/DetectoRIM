@@ -4,7 +4,7 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 
-Tool to detect recombination in Streptomyces species very close genetically
+Tool to detect recombination in Streptomyces strains very close genetically
 
 
 ## Contents
