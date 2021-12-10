@@ -315,7 +315,7 @@ finduprogamme = time.process_time()
 temps=finduprogamme-débutduprogramme
 print(f'Elapsed time : {temps}s')
 temps2=temps/60
-print(f'Temps écoulé : {temps2}min')
+print(f'Elapsed time : {temps2}min')
 
 
 
