@@ -2,18 +2,11 @@
 import pandas as pd
 import statistics
 import openpyxl
-from dna_features_viewer import (
-    GraphicFeature,
-    GraphicRecord,
-    CircularGraphicRecord,
-)
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from Bio import SeqIO
 import time
 from Bio import SeqFeature
-from Bio.SeqFeature import FeatureLocation
-from Bio.SeqFeature import SeqFeature
 
 
 
