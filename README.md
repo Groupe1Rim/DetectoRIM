@@ -77,7 +77,7 @@ A successful Chimerator.py run will generate differents files :
 
 Be careful, if the two sequences studied are genetically close, this can result in the creation of a large number of chimeras. So make sure you have enough memory on your hard drive. 
 
-## Create final sequene from consensus sequence
+## Create final sequence from consensus sequence
 
 To create a final mix sequence you have to use Consensusator.py
 First you have to aligned the 2 consensus sequences on the Mauve tool (http://darlinglab.org/mauve/mauve.html)
