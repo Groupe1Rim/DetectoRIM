@@ -53,6 +53,7 @@ lstart=[]
 for i in range(seql):
     if i%Longueur == 0:
         lstart.append(i)
+lstart.append(seql)
 
 len2=len(lstart)
 len3=len2-1
@@ -60,34 +61,25 @@ lcompteur=[]
 
 for t in range(len(lstart)):
     g=t+1
-    if g>=len2:
-        g=g-1
-    else:
-        g=g
-    compteur=0
-    for y in range(len(liste)):
-        if lstart[t]<=liste[y]<=lstart[g]:
-            compteur=compteur+1
+    if g<=len2:
+        compteur=0
+        for y in range(len(liste)):
+            if lstart[t]<=liste[y]<=lstart[g]:
+                compteur=compteur+1
     #if compteur>testden:
         #Feature.append(GraphicFeature(start=lstart[t], end=lstart[g],color="#ffcccc"))
     #else:
         #Feature.append(GraphicFeature(start=lstart[t], end=lstart[g],color="#cffccc"))
         
-    lcompteur.append(compteur)
+        lcompteur.append(compteur)
+
+
+
     
-positiong=[]
-positiond=[]
-for j in range(len(lcompteur)):
-    b=j*Longueur
-    r=b+Longueur
-    positiong.append(b)
-    positiond.append(r)
-    
-    
-data = {'SNPs':lcompteur,'Start':positiong,'End':positiond}
+data = {'Start':lstart,'SNPs':lcompteur}
 dfinal = pd.DataFrame(data)
 dfinal['index'] = dfinal.index
-dfinal.to_excel(f'total_SNPs123.xlsx')
+dfinal.to_excel(f'total_SNPs.xlsx')
 
 
 
@@ -113,7 +105,7 @@ data = {'Start':newsizestart,'End':newsizeend}
 dnewlarge = pd.DataFrame(data)
 
 
-fichier1 = open(f'Infos8.txt', "a")
+fichier1 = open(f'Infos.txt', "a")
 fichier1.write(f'Taille de la zone: {Longueur} pb\n')
 fichier1.write(f'Densité moyenne de snps sur le génome total {den}\n')
 fichier1.write(f'Cela correspont en moyenne à 1 SNP tous les {dens} nucléotides \n')
@@ -127,9 +119,6 @@ fichier1.close()
 #ax.figure.savefig("SNPs.png")
 print("It's over!")
 
-
-
-        
 
 
 
